@@ -1,0 +1,123 @@
+/* Import fonts for the luxury aesthetic */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400&display=swap');
+
+.home-wrapper {
+    width: 100%;
+    height: 100vh;
+    /* Full screen height */
+}
+
+.home-page {
+    width: 100%;
+    height: 100%;
+    /* Replace 'background-image' with your actual image path */
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home-hero {
+    color: #ffffff;
+    max-width: 900px;
+}
+
+.home-hero-p {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    letter-spacing: 5px;
+    /* Creates the wide look in the design */
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.home-hero-h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 8vw, 72px);
+    /* Responsive sizing */
+    font-weight: 400;
+    margin: 0 0 40px 0;
+    line-height: 1.1;
+}
+
+.home-hero-btn {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 15px 40px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.home-hero-btn:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+
+/* Tablet breakpoint (≤768px) */
+@media (max-width: 768px) {
+    .home-wrapper {
+        height: 75vh;
+        /* reduce height */
+       
+    }
+
+    
+
+    .home-hero-p {
+        font-size: 12px;
+        letter-spacing: 3px;
+        margin-bottom: 12px;
+    }
+
+    .home-hero-h1 {
+        font-size: clamp(28px, 7vw, 52px);
+        margin-bottom: 30px;
+    }
+
+    .home-hero-btn {
+        padding: 12px 28px;
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+}
+
+/* Mobile / Android breakpoint (≤480px) */
+@media (max-width: 480px) {
+   
+    .home-wrapper {
+            height: 75vh;
+            /* reduce height */
+    
+    }
+   
+
+    .home-hero-p {
+        font-size: 11px;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+
+    .home-hero-h1 {
+        font-size: clamp(22px, 8vw, 38px);
+        margin-bottom: 25px;
+        line-height: 1.2;
+    }
+
+    .home-hero-btn {
+        padding: 10px 20px;
+        font-size: 10px;
+        width: 100%;
+        /* full-width button for touch ergonomics */
+        max-width: 260px;
+        margin: 0 auto;
+    }
+}

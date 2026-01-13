@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+
+.order-details-wrapper {
+  background-color: #fdf8f4;
+  min-height: 100vh;
+  padding: 40px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.order-details-container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 850px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.return-order {
+  align-self: flex-start;
+  max-width: 850px;
+  width: 100%;
+  margin-bottom: 20px;
+  color: #667085;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Header Section with Background Image */
+.order-info-with-bg-image {
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* Add this */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px;
+  color: white;
+  z-index: 1; /* Ensure it stays above the wrapper */
+}
+
+.order-info-with-bg-image::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.7));
+}
+
+.order-info-with-bg-image h2, 
+.order-info-with-bg-image p {
+  position: relative;
+  margin: 0;
+  z-index: 1;
+}
+
+
+
+.order-info-with-bg-image h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 4px;
+}
+
+.order-info-with-bg-image p {
+  font-size: 14px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+
+/* Middle Section: Stay Details & Price */
+.order-info-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 40px;
+  gap: 60px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.left-order-info h3, 
+.order-price-summary h2 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #98a2b3;
+  margin-bottom: 24px;
+}
+
+.date-info-div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.check-in-div p, .check-out-div p {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #667085;
+  margin-bottom: 6px;
+}
+
+.bold-date {
+
+  font-size: 18px;
+  font-weight: 700;
+  color: #1d2939;
+}
+
+.guest-info-text {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #667085;
+  margin-bottom: 10px;
+}
+
+.guest-info-div {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.adult-div p, .child-div p {
+  font-size: 14px;
+  color: #344054;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Price Summary Styles */
+.order-price-summary p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  color: #475467;
+  font-size: 14px;
+}
+
+.total-price-details {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f0;
+  color: #5a4025 !important ;
+  font-size: 25px !important;
+    font-family: 'Playfair Display', serif;
+
+}
+
+.total-price-details strong {
+  color: #1d2939;
+  font-size: 16px;
+}
+
+.total-price-details b, .total-price-details strong + span {
+  font-family: 'Playfair Display', serif;
+  color: #8b6d45 !important;
+  font-size: 24px;
+}
+
+/* Status Footer Section */
+.order-status-details {
+  padding: 24px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fcfcfd;
+}
+
+.order-status-details h2 {
+  font-size: 14px;
+  color: #667085;
+  font-weight: 500;
+}
+
+.status-details {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.status-details.approved {
+  background: #eff8ff;
+  color: #175cd3;
+  border: 1px solid #b2ddff;
+}
+
+.status-details.paid {
+  background: #ecfdf3;
+  color: #027a48;
+}
+
+/* Button Styles */
+.pay-btn-details {
+  background: #5a4025;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.pay-btn-details:hover {
+  background: #3e2b1a;
+}
+
+
+.paid-section-details {
+  display: flex;
+  justify-content: space-between; /* space out text and button */
+  align-items: center;
+  gap: 20px; /* spacing between items */
+  margin: 20px 0;
+  padding: 16px;
+  background: #fdfaf5;
+  border: 1px solid #e5e1da;
+  border-radius: 8px;
+}
+
+.paid-text-details {
+  font-size: 16px;
+  font-weight: 500;
+  color: #4a3728;
+  margin: 0;
+}
+
+.paid-section-details button {
+  background: #5a4025;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.paid-section-details button:hover {
+  background: #3e2b1a;
+  transform: translateY(-2px);
+}
+
+/* Tablet & Android breakpoint */
+@media (max-width: 768px) {
+  .paid-section-details {
+    flex-direction: column; /* stack vertically */
+    align-items: flex-start; /* align text and button to left */
+  }
+
+  .paid-section-details button {
+    width: 100%; /* full-width button for touch ergonomics */
+    text-align: center;
+  }
+}
+
+
+.qr-code-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+ /* soft cream background */
+  border: 1px solid #e5e1da;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.qr-code-wrapper p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a3728;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* QR code itself */
+.qr-code-wrapper svg {
+  border: 6px solid #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  background: #fff;
+  padding: 8px;
+}
+
+/* Tablet breakpoint */
+@media (max-width: 768px) {
+  .qr-code-wrapper {
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .qr-code-wrapper p {
+    font-size: 13px;
+  }
+
+  .qr-code-wrapper svg {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Mobile / Android breakpoint */
+@media (max-width: 480px) {
+  .qr-code-wrapper {
+    padding: 16px;
+    gap: 8px;
+  }
+
+  .qr-code-wrapper p {
+    font-size: 12px;
+  }
+
+  .qr-code-wrapper svg {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+
+
+/* Between 1100px and 768px (large tablet / small laptop) */
+@media (max-width: 1100px) and (min-width: 768px) {
+  .order-details-wrapper {
+    padding: 30px 15px;
+     margin-top: 5rem;
+  }
+
+  .order-details-container {
+    max-width: 95%; /* shrink container width */
+  }
+
+  .order-info-with-bg-image {
+    height: 220px;
+    padding: 30px;
+  }
+
+  .order-info-with-bg-image h2 {
+    font-size: 30px;
+  }
+
+  .order-info-section {
+    grid-template-columns: 1fr; /* stack columns */
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .total-price-details {
+    font-size: 22px !important;
+  }
+
+  .order-status-details {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .pay-btn-details {
+    width: 100%; /* full width button */
+    padding: 12px;
+  }
+}
+
+/* Tablet breakpoint (≤768px) */
+@media (max-width: 768px) {
+  .order-details-wrapper {
+    padding: 20px 10px;
+     margin-top: 3rem;
+  }
+
+  .order-info-with-bg-image {
+    height: 200px;
+    padding: 20px;
+  }
+
+  .order-info-with-bg-image h2 {
+    font-size: 26px;
+  }
+
+  .order-info-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .bold-date {
+    font-size: 16px;
+  }
+
+  .guest-info-div {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .order-price-summary p {
+    font-size: 13px;
+  }
+
+  .total-price-details {
+    font-size: 20px !important;
+  }
+
+  .order-status-details {
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .status-details {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .pay-btn-details {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* Mobile / Android breakpoint (≤480px) */
+@media (max-width: 480px) {
+  .order-info-with-bg-image {
+    height: 160px;
+    padding: 15px;
+  }
+
+  .order-info-with-bg-image h2 {
+    font-size: 22px;
+  }
+
+  .order-info-with-bg-image p {
+    font-size: 12px;
+  }
+
+  .order-info-section {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .bold-date {
+    font-size: 14px;
+  }
+
+  .adult-div p, .child-div p {
+    font-size: 12px;
+  }
+
+  .order-price-summary p {
+    font-size: 12px;
+  }
+
+  .total-price-details {
+    font-size: 18px !important;
+  }
+
+  .order-status-details h2 {
+    font-size: 12px;
+  }
+
+  .status-details {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  .pay-btn-details {
+    font-size: 13px;
+    padding: 8px;
+  }
+  .pending-text-details{
+    font-size: 14px;
+  }
+}

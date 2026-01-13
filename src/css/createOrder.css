@@ -1,0 +1,443 @@
+/* Base Styles & Variables */
+:root {
+  --bg-color: #faf5e9;
+  --card-bg: #ffffff;
+  --accent-brown: #634832;
+  --text-main: #634832;
+  --text-muted: #717171;
+  --border-light: #f0f0f0;
+  --border-dark: #634832;
+  --font-serif: "Playfair Display", serif; /* Ensure you import this font */
+  --font-sans: "Inter", sans-serif;
+}
+
+.create-order-wrapper {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: var(--font-sans);
+  color: var(--text-main);
+}
+
+.create-order-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 30px;
+  margin-top: 3rem;
+}
+
+/* Headings */
+.create-order-h2 {
+  grid-column: 1 / -1;
+  font-family: var(--font-serif);
+  font-size: 42px;
+  font-weight: 700;
+  
+}
+
+.create-order-p {
+  grid-column: 1 / -1;
+  color: var(--text-muted);
+  font-size: 16px;
+  margin-bottom: 30px;
+  margin-top: -3rem;
+}
+
+/* Left Column Styling */
+.left-create-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Room Info Card */
+.room-info {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+ /* Highlighted room look */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.room-order-image {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.room-info-right {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.room-info-right-left h2 {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.room-info-right-left p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.room-info-right-right {
+  text-align: right;
+}
+
+.room-info-right-right p:first-child {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent-brown);
+}
+
+.faded {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Form Styling */
+.order-form-grid-2fr {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-column label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.form-column input {
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: #fff;
+  transition: border-color 0.2s;
+}
+
+.form-column input:focus {
+  outline: none;
+  border-color: var(--accent-brown);
+}
+
+/* Right Column (Summary) */
+.right-create-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-infp-top {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.right-infp-top h2 {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.date-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fafaf8;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.left-date p, .right-date p {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 5px;
+}
+
+.left-date h3, .right-date h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.price-info-1, .price-info-2, .total-amount-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.price-bold {
+  font-weight: 700;
+}
+
+.price-offer {
+  color: #2e7d32;
+  background: #e8f5e9;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.total-amount-row {
+  border-top: 1px dashed #ddd;
+  padding-top: 20px;
+  margin-top: 20px;
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.total-amount-price {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  color: var(--accent-brown);
+}
+
+.book-btn {
+  width: 100%;
+  padding: 16px;
+  background: var(--accent-brown);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: opacity 0.2s;
+}
+
+.book-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Bottom help card */
+.right-info-bottom {
+  background: #fdf2e3;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #f2e0c9;
+}
+
+.spl-t {
+  font-weight: 700;
+  color: var(--accent-brown);
+}
+
+.spl-t-faded {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 5px 0;
+}
+
+.spl-t-no {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .create-order-page {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Tablet breakpoint (≤768px) */
+@media (max-width: 768px) {
+  .create-order-wrapper {
+    padding: 30px 15px;
+    min-height: auto;
+  }
+
+  .create-order-h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .create-order-p {
+    font-size: 14px;
+    margin-top: -2rem;
+    text-align: center;
+  }
+
+  .room-order-image {
+    width: 140px;
+    height: 100px;
+  }
+
+  .room-info-right-left h2 {
+    font-size: 18px;
+  }
+
+  .room-info-right-left p {
+    font-size: 13px;
+  }
+
+  .room-info-right-right p:first-child {
+    font-size: 20px;
+  }
+
+  .order-form-grid-2fr {
+    grid-template-columns: 1fr; /* stack form columns */
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .form-column input {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .right-infp-top h2 {
+    font-size: 20px;
+  }
+
+  .date-info {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .left-date h3, .right-date h3 {
+    font-size: 14px;
+  }
+
+  .total-amount-price {
+    font-size: 24px;
+  }
+
+  .book-btn {
+    font-size: 15px;
+    padding: 14px;
+  }
+}
+
+/* Mobile / Android breakpoint (≤480px) */
+@media (max-width: 480px) {
+  .create-order-wrapper {
+    padding: 20px 10px;
+  }
+
+  .create-order-h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  .create-order-p {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .room-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .room-order-image {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+  }
+
+  .room-info-right {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .room-info-right-left h2 {
+    font-size: 16px;
+  }
+
+  .room-info-right-left p {
+    font-size: 12px;
+  }
+
+  .room-info-right-right p:first-child {
+    font-size: 18px;
+  }
+
+  .order-form-grid-2fr {
+    grid-template-columns: 1fr;
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .form-column label {
+    font-size: 11px;
+  }
+
+  .form-column input {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .right-infp-top {
+    padding: 20px;
+  }
+
+  .right-infp-top h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .date-info {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .left-date h3, .right-date h3 {
+    font-size: 13px;
+  }
+
+  .total-amount-price {
+    font-size: 20px;
+  }
+
+  .book-btn {
+    font-size: 14px;
+    padding: 12px;
+    width: 100%; /* full-width for touch ergonomics */
+  }
+
+  .spl-t-faded {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .spl-t-no {
+    font-size: 14px;
+    text-align: center;
+  }
+}

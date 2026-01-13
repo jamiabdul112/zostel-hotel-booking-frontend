@@ -1,0 +1,506 @@
+/* Typography - Suggesting Playfair Display for headings and Lato/Inter for body */
+
+
+.room-details-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #fffbf2;
+    color: #333;
+    margin-top: 2rem;
+}
+
+/* Top Section */
+.room-title-dtn {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.room-type-dtn {
+    display: none;
+    /* Hidden to match the minimalist look of the image */
+}
+
+.room-details-top-info-row {
+    display: flex;
+    gap: 20px;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.room-details-top-info-row p::after {
+    content: " •";
+    margin-left: 15px;
+}
+
+.room-details-top-info-row p:last-child::after {
+    content: "";
+}
+
+/* Image Carousel - Styled to be large and prominent */
+.room-carousel {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.room-detail-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-s-button-space-between-row {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.carousel-btn {
+    background: rgba(255, 255, 255, 0.237);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.3s;
+    margin: 1rem;
+}
+
+.carousel-btn:hover {
+    background: #fff;
+}
+
+.carousel-indicator {
+    background: rgba(0, 0, 0, 0.281);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+/* Main Content Layout */
+.room-content {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    gap: 60px;
+}
+
+/* Left Column */
+.room-description h4,
+.room-amenities h4,
+.room-description h4 ,
+.things-h4{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.room-amenities h4{
+    margin-bottom: 30px;
+}
+
+.things-h4{
+    margin-top: 50px;
+}
+
+.room-description p {
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.room-amenities ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    padding: 0;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.room-amenities li {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.room-amenities li::before {
+    content: "✓";
+    /* You can replace this with actual icons from your library */
+    margin-right: 10px;
+    color: #5D4719;
+}
+
+.things-to-know-grid-2fr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+ 
+   
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Right Column (Booking Card) */
+.room-content-right {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+    text-align: center;
+}
+
+.starting-from-p {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.room-price {
+    margin-bottom: 25px;
+    width: max-content;
+}
+
+.original-price-cnt {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 1.1rem;
+    margin-right: 10px;
+}
+
+.offer-price-cnt {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #5D4719;
+}
+
+.night-dtn {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.room-dt-btn {
+    width: 100%;
+    background-color: #5D4719;
+    /* The exact brown from image */
+    color: white;
+    border: none;
+    padding: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.room-dt-btn:hover {
+    background-color: #4a3914;
+}
+
+.room-availability {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #27ae60;
+}
+.edit-room-btn {
+  display: inline-block;
+  padding: 0.3rem 0.5rem;
+  background-color: #4a3914b2; /* blue tone */
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none; /* if it's a Link */
+  transition: background-color 0.2s ease, transform 0.2s ease;
+
+}
+
+.edit-room-btn:hover {
+  background-color: #4a3914; /* darker blue on hover */
+  transform: translateY(-2px);
+}
+
+.edit-room-btn:active {
+  background-color: #4a3914; /* even darker when clicked */
+  transform: translateY(0);
+}
+
+.delete-room-btn {
+  padding: 0.3rem 0.5rem;
+  background-color: #d21919; /* red */
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.delete-room-btn:hover {
+  background-color: #971313; /* darker red */
+  transform: translateY(-2px);
+}
+
+.delete-room-btn:active {
+  background-color: #971313;
+  transform: translateY(0);
+}
+
+
+
+/* Tablet breakpoint (≤768px) */
+@media (max-width: 768px) {
+  .edit-room-btn,
+  .delete-room-btn {
+    font-size: 13px;
+    padding: 0.25rem 0.45rem;
+    border-radius: 5px;
+  }
+
+  .delete-room-btn {
+    margin-left: 0.4rem;
+  }
+}
+
+/* Mobile / Android breakpoint (≤480px) */
+@media (max-width: 480px) {
+  .edit-room-btn,
+  .delete-room-btn {
+         
+    width: max-content;             /* full-width for touch ergonomics */
+    text-align: center;
+    font-size: 12px;
+    padding: 0.4rem 0.6rem;
+    margin: 0.3rem 0;        /* spacing between stacked buttons */
+  }
+
+  .delete-room-btn {
+    margin-left: 0;          /* reset left margin when stacked */
+  }
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .room-content {
+        grid-template-columns: 1fr;
+    }
+
+    .room-content-right {
+        position: static;
+        order: -1;
+    }
+}
+
+
+/* Tablet breakpoint (≤768px) */
+@media (max-width: 768px) {
+    .room-details-wrapper {
+        padding: 30px 15px;
+        margin-top: 1.5rem;
+    }
+
+    .room-title-dtn {
+        font-size: 2rem;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    .room-details-top-info-row {
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+        justify-content: center;
+        text-align: center;
+        width: max-content;
+    }
+
+    .room-carousel {
+        height: 350px;
+        /* reduce image height */
+        margin-bottom: 30px;
+    }
+
+    .carousel-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .room-content {
+        grid-template-columns: 1fr;
+        /* stack columns */
+        gap: 30px;
+
+    }
+
+    .room-content-right {
+        padding: 30px;
+        position: static;
+        order: -1;
+        margin-top: 1rem;
+        /* booking card above description */
+    }
+
+    .room-content-left{
+        padding: 10px 30px;
+    }
+
+
+    .room-description h4,
+    .room-amenities h4,
+    .things-h4 {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+        text-align: center;
+        text-align: left;
+    }
+
+    .room-description p {
+        margin-bottom: 45px;
+        font-size: 0.95rem;
+       margin-top: 40px;
+    }
+
+
+
+    .room-amenities ul {
+        grid-template-columns: 1fr;
+        /* single column list */
+        
+        margin-bottom: 25px;
+    }
+
+    .things-to-know-grid-2fr {
+        grid-template-columns: 1fr;
+        /* stack items */
+        
+        font-size: 0.85rem;
+    }
+
+    .offer-price-cnt {
+        font-size: 1.8rem;
+    }
+
+    .room-price{
+        text-align: center;
+        
+        width: 100%;
+    }
+    .room-dt-btn {
+        padding: 14px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile / Android breakpoint (≤480px) */
+@media (max-width: 480px) {
+    .room-details-wrapper {
+        padding: 20px 10px;
+        margin-top: 1rem;
+    }
+
+    .room-title-dtn {
+        font-size: 1.6rem;
+        margin-bottom: 6px;
+    }
+
+    .room-details-top-info-row {
+        font-size: 0.8rem;
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+
+    .room-carousel {
+        height: 220px;
+        /* smaller image height */
+        margin-bottom: 20px;
+    }
+
+    .carousel-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+        margin: 0.5rem;
+    }
+
+    .room-description h4,
+    .room-amenities h4,
+    .things-h4 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+        text-align: left;
+    }
+
+    .room-description p {
+        font-size: 0.85rem;
+        margin-bottom: 45px;
+        line-height: 1.5;
+        margin-top: 24px;
+    }
+
+    .room-amenities ul {
+        grid-template-columns: 1fr;
+       
+        margin-bottom: 20px;
+    }
+
+    .room-amenities li {
+        font-size: 0.85rem;
+    }
+
+    .things-to-know-grid-2fr {
+        grid-template-columns: 1fr;
+        font-size: 0.8rem;
+        
+    }
+
+    .room-content-right {
+        padding: 20px;
+    }
+
+    .offer-price-cnt {
+        font-size: 1.5rem;
+    }
+
+    .room-dt-btn {
+        padding: 12px;
+        font-size: 0.9rem;
+        width: 100%;
+        /* full-width button for touch ergonomics */
+    }
+
+    .room-availability {
+        font-size: 1rem;
+    }
+}

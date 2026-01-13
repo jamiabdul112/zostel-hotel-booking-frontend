@@ -1,0 +1,342 @@
+:root {
+    --primary-brown: #63481a;
+    --text-grey: #757575;
+    --bg-cream: #fffbf2;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --serif-font: 'Playfair Display', serif;
+    /* Ensure you import this font */
+}
+
+
+
+.room-wrapper {
+    background-color: var(--bg-cream);
+    padding: 60px 20px;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Category Tabs Styling */
+.home-category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    width: max-content;
+    margin: 0 auto 50px auto;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: var(--card-shadow);
+    gap: 10px;
+}
+
+.tab-item {
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    
+    color: var(--text-grey);
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.tab-item.active {
+    background-color: var(--primary-brown);
+    color: #fff;
+    border-radius: 2px;
+}
+
+.tab-indicator {
+    display: none;
+    /* Hiding the line indicator to match the solid button style in image */
+}
+
+/* Room Grid Styling */
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Room Card Styling */
+.room-card {
+    background: #fff;
+    padding-bottom: 25px;
+    transition: transform 0.3s ease;
+    box-shadow: var(--card-shadow);
+    position: relative;
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+}
+
+.room-image {
+    width: 100% !important;
+    height: 290px !important;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.room-type {
+    padding: 0 25px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #bfa37d;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+    padding-top: 25px;
+}
+
+.room-title {
+    padding: 0 25px;
+    font-family: var(--serif-font);
+    font-size: 22px;
+    color: #333;
+    margin: 0 0 15px 0;
+    font-weight: 500;
+}
+
+.room-s-info {
+    padding: 0 25px;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 15px;
+}
+
+.room-s-info-p {
+    font-size: 13px;
+    color: var(--text-grey);
+    display: flex;
+    align-items: center;
+}
+
+/* Price Row Styling */
+.room-s-price-row {
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.room-price {
+    font-family: var(--serif-font);
+    font-size: 28px;
+    font-weight: 700;
+    color: #222;
+    margin: 0;
+}
+
+.original-price {
+    font-size: 16px;
+    text-decoration: line-through;
+    color: #ccc;
+    margin-right: 8px;
+}
+
+.offer-price {
+    color: #d9534f;
+    /* Reddish color for offer */
+}
+
+.room-night {
+    font-size: 12px;
+    color: #999;
+    margin: 0;
+}
+
+.room-s-price-btn {
+    background: transparent;
+    border: 1px solid #d1d1d1;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: var(--primary-brown);
+    transition: all 0.3s ease;
+}
+
+.room-s-price-btn:hover {
+    background: var(--primary-brown);
+    color: #fff;
+    border-color: var(--primary-brown);
+}
+
+.room-card.active-room {
+    opacity: 0.5;
+        transition: opacity 0.3s ease;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .room-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-category {
+        flex-wrap: wrap;
+        justify-content: center;
+    } 
+}
+
+
+/* Tablet breakpoint (≤768px) */
+@media (max-width: 768px) {
+    .room-wrapper {
+        padding: 40px 15px;
+        min-height: auto;
+        /* reduce forced height */
+    }
+
+    .home-category {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 30px;
+        padding: 6px;
+        gap: 8px;
+    }
+
+    .tab-item {
+        padding: 8px 18px;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+
+    .room-grid {
+        grid-template-columns: 1fr;
+        /* single column */
+        gap: 20px;
+        max-width: 100%;
+    }
+
+    .room-card {
+        padding-bottom: 20px;
+    }
+
+    .room-image {
+        height: 220px !important;
+        /* reduce image height */
+        margin-bottom: 15px;
+    }
+
+    .room-type {
+        font-size: 11px;
+        padding: 0 15px;
+        padding-top: 20px;
+    }
+
+    .room-title {
+        font-size: 20px;
+        padding: 0 15px;
+        margin-bottom: 12px;
+    }
+
+    .room-s-info {
+        padding: 0 15px;
+        gap: 15px;
+        margin-bottom: 20px;
+        padding-bottom: 12px;
+    }
+
+    .room-s-info-p {
+        font-size: 12px;
+    }
+
+    .room-s-price-row {
+        padding: 0 15px;
+    }
+
+    .room-price {
+        font-size: 24px;
+    }
+
+    .original-price {
+        font-size: 14px;
+    }
+
+    .room-s-price-btn {
+        padding: 8px 16px;
+        font-size: 11px;
+    }
+}
+
+/* Mobile / Android breakpoint (≤480px) */
+@media (max-width: 480px) {
+    .room-wrapper {
+        padding: 30px 10px;
+    }
+
+    .home-category {
+        margin-bottom: 20px;
+        gap: 6px;
+    }
+
+    .tab-item {
+        padding: 6px 14px;
+        font-size: 11px;
+    }
+
+    .room-image {
+        height: 180px !important;
+        /* smaller image */
+    }
+
+    .room-type {
+        font-size: 10px;
+        padding: 0 12px;
+        padding-top: 15px;
+    }
+
+    .room-title {
+        font-size: 18px;
+        padding: 0 12px;
+        margin-bottom: 10px;
+    }
+
+    .room-s-info {
+        padding: 0 12px;
+        gap: 10px;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+
+    .room-s-info-p {
+        font-size: 11px;
+    }
+
+    .room-s-price-row {
+        padding: 0 12px;
+        flex-direction: column;
+        /* stack price + button */
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .room-price {
+        font-size: 20px;
+    }
+
+    .original-price {
+        font-size: 13px;
+    }
+
+    .room-night {
+        font-size: 11px;
+    }
+
+    .room-s-price-btn {
+        width: 100%;
+        /* full-width button for touch ergonomics */
+        text-align: center;
+        padding: 8px 0;
+        font-size: 11px;
+    }
+}

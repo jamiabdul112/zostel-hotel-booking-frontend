@@ -1,0 +1,429 @@
+
+.create-room-wrapper {
+  background-color: #fdfaf5; /* Cream background */
+  min-height: 100vh;
+  padding: 40px 20px;
+
+  color: #4a3728;
+  margin-top: 4rem;
+}
+
+.create-room-page {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.create-room-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.create-room-h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin: 0;
+  color: #4a3728;
+}
+
+.go-back-p {
+  font-size: 14px;
+  color: #8c7e6d;
+  margin: 0;
+  transition: color 0.2s;
+}
+
+.go-back-p:hover {
+  color: #5e4226;
+}
+
+/* Form Sections */
+.create-room-form h4, 
+.room-form-label-input-bar label[for="basic-info"] { 
+    /* Dummy reference for section headers */
+}
+
+/* Styling the "Subheadings" like Basic Information, Room Gallery */
+
+
+.room-form-label-input-bar {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.room-form-label-input-bar label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* Row alignment */
+.form-2nd-line-row-flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Inputs & Selects */
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e5e1da;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: #fff;
+  transition: border-color 0.2s;
+}
+
+input[type="number"]{
+    width: 90%;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #5e4226;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Room Gallery / Upload Area */
+.input-the-image {
+  border: 2px dashed #e5e1da;
+  padding: 40px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #fafafa;
+}
+
+.image-preview {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.preview-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Amenities Grid */
+.amenities-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.amenities-checkboxes h4 {
+  grid-column: 1 / -1;
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin: 20px 0 10px 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.amenity-frid-4fr label {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #e5e1da;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+}
+
+.amenity-frid-4fr label:hover {
+  background-color: #fdfaf5;
+}
+
+.amenity-frid-4fr input[type="checkbox"] {
+  margin-right: 12px;
+  accent-color: #5e4226;
+}
+
+/* Buttons */
+.create-room-btn {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.reset-btn {
+  background: #fff;
+  border: 1px solid #e5e1da;
+  padding: 12px 25px;
+  border-radius: 6px;
+  color: #555;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.publish-btn {
+  background: #5e4226; /* Dark brown from image */
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.publish-btn:hover {
+  background: #4a3728;
+}
+
+.publish-btn:disabled {
+  background: #a89a8e;
+  cursor: not-allowed;
+}
+
+.remove-btn{
+  background: rgba(244, 67, 54, 0.9); /* red tone */ 
+  color: #fff; 
+  border: none;
+   border-radius: 50%; 
+   width: 24px; 
+   height: 24px; 
+   font-size: 14px; 
+   line-height: 24px;
+    text-align: center; 
+    cursor: pointer; 
+    transition: background 0.2s ease; 
+
+}
+
+  .remove-btn:hover { 
+    background: rgba(211, 47, 47, 0.95); /* darker red on hover */ 
+  }
+
+
+  /* Toggle switch container */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+/* Hide default checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider background */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 26px;
+}
+
+/* Slider knob */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Checked state */
+.switch input:checked + .slider {
+  background-color: #4caf50; /* green when available */
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* Rounded style */
+.slider.round {
+  border-radius: 26px;
+}
+
+/* Tablet breakpoint (≤768px) */
+@media (max-width: 768px) {
+  .create-room-wrapper {
+    padding: 30px 15px;
+    min-height: auto;
+    margin-top: 4rem;
+  }
+
+  .create-room-page {
+    padding: 30px;
+  }
+
+  .create-room-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .create-room-h2 {
+    font-size: 32px;
+  }
+
+  .go-back-p {
+    font-size: 13px;
+  }
+
+  .form-2nd-line-row-flex {
+    grid-template-columns: 1fr; /* stack inputs */
+    gap: 15px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  select,
+  textarea {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .input-the-image {
+    padding: 30px;
+  }
+
+  input[type="number"]{
+    width: 96%;
+  }
+  input[type="text"], textarea{
+    width: 96%;
+  }
+
+  .preview-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .amenities-checkboxes {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .amenities-checkboxes h4 {
+    font-size: 20px;
+  }
+
+  .create-room-btn {
+    justify-content: center;
+  }
+
+  .reset-btn,
+  .publish-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile / Android breakpoint (≤480px) */
+@media (max-width: 480px) {
+  .create-room-wrapper {
+    padding: 20px 10px;
+     margin-top: 3rem;
+  }
+
+  .create-room-page {
+    padding: 20px;
+  }
+
+  .create-room-h2 {
+    font-size: 26px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .go-back-p {
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .form-2nd-line-row-flex {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  select,
+  textarea {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  textarea {
+    min-height: 100px;
+  }
+
+  input[type="number"]{
+    width: 92%;
+  }
+  input[type="text"], textarea{
+    width: 92%;
+  }
+  .input-the-image {
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+
+  .preview-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .amenities-checkboxes {
+    grid-template-columns: 1fr; /* single column */
+    gap: 10px;
+  }
+
+  .amenities-checkboxes h4 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .create-room-btn {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .reset-btn,
+  .publish-btn {
+    width: 100%; /* full-width buttons for touch ergonomics */
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+}

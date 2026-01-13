@@ -1,0 +1,200 @@
+/* Container styling */
+.header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.3);
+    /* Transparent dark overlay */
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    border-bottom: 1px solid #ffffff32;
+}
+
+/* Logo styling */
+.header-p {
+    color: #ffffff;
+    font-family: "Playfair Display", serif;
+    /* Use a serif font for luxury look */
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Desktop Navigation */
+.nav-links.desktop {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav-menuss {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-menuss a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    transition: opacity 0.3s ease;
+    position: relative;
+}
+
+.nav-menuss a:hover {
+    opacity: 0.8;
+}
+
+/* Active link underline (e.g., for 'Rooms') */
+
+
+/* My Bookings Button */
+.book-table {
+    background-color: #ffffff;
+    color: #634821;
+    /* Luxury brown/gold color from the design */
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.book-table:hover {
+    background-color: #634821;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+/* Mobile Hamburger Styles */
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bar {
+    width: 25px;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.nav-links.mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+}
+
+.nav-links.mobile a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Tablet breakpoint (≤768px) */
+@media (max-width: 768px) {
+    .header-page {
+        padding: 1rem 1.5rem;
+    }
+
+    .header-p {
+        font-size: 1rem;
+    }
+
+    /* Hide desktop nav, show hamburger */
+    
+
+    .book-table {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .nav-links.mobile a {
+        font-size: 1.3rem;
+    }
+}
+
+/* Mobile / Android breakpoint (≤480px) */
+@media (max-width: 480px) {
+    .header-page {
+        padding: 0.8rem 1rem;
+    }
+
+    .header-p {
+        font-size: 1.3rem;
+        letter-spacing: 0.5px;
+    }
+
+    /* Hide desktop nav completely */
+   
+
+   
+
+    .bar {
+        width: 22px;
+        height: 2px;
+    }
+
+    .book-table {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+    }
+
+    .nav-links.mobile a {
+        font-size: 1.1rem;
+    }
+
+    .close-btn {
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.8rem;
+    }
+}
