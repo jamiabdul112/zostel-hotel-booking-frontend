@@ -6,6 +6,7 @@ import { useQuery } from '@tanstack/react-query'
 import { HashLink } from 'react-router-hash-link';
 import { TbLogout2 } from "react-icons/tb";
 import toast from "react-hot-toast";
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
