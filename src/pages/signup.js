@@ -76,7 +76,7 @@ function SignUp() {
                                 placeholder="Name"
                                 name="name"
                                 onChange={handleInputChange}
-                                value={formData.username}
+                                value={formData.name}
                             />
                         </label>
                         
