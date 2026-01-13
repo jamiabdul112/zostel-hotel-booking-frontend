@@ -27,20 +27,23 @@ function Header() {
 
     const handleLogout = async () => {
         try {
-        const res = await fetch("/api/auth/logout", {
+            // Use the full URL
+            const res = await fetch(`${baseURL}/api/auth/logout`, {
             method: "POST",
             credentials: "include",
-        });
+            });
 
-        const data = await res.json();
-        if (!res.ok) throw new Error(data.error || "Logout failed");
+            // Check if response is actually JSON
+            const data = await res.json();
+            
+            if (!res.ok) throw new Error(data.message || "Logout failed");
 
-        toast.success("Logged out successfully");
-        navigate("/");
+            toast.success("Logged out successfully");
+            navigate("/login");
         } catch (err) {
-        toast.error(err.message);
+            toast.error(err.message);
         }
-    };
+        };
 
 
     return (
