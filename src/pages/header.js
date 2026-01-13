@@ -4,10 +4,15 @@ import { Link } from 'react-router-dom'
 import '../css/header.css'
 import { useQuery } from '@tanstack/react-query'
 import { HashLink } from 'react-router-hash-link';
+import { TbLogout2 } from "react-icons/tb";
+import toast from "react-hot-toast";
 
 function Header() {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
     const [isOpen, setIsOpen] = useState(false);
+
+    const navigate = useNavigate();
+
 
     useEffect(() => {
         const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -18,6 +23,23 @@ function Header() {
     const { data: authUser } = useQuery({
         queryKey: ["authUser"],
     });
+
+    const handleLogout = async () => {
+        try {
+        const res = await fetch("/api/auth/logout", {
+            method: "POST",
+            credentials: "include",
+        });
+
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || "Logout failed");
+
+        toast.success("Logged out successfully");
+        navigate("/");
+        } catch (err) {
+        toast.error(err.message);
+        }
+    };
 
 
     return (
@@ -46,7 +68,12 @@ function Header() {
                             {authUser?.role === "admin" && (
                             <Link to="/admin/orders">
                             <a>Admin Orders</a>
+                           
                             </Link> ) }
+                                
+                             <button className="logout-btn" onClick={handleLogout}>
+                                <TbLogout2 size={20} />
+                            </button>
                             <a href="#contact">Contact Us</a>
 
                         </div>
@@ -88,6 +115,10 @@ function Header() {
                                             <Link to="/admin/orders">
                                             <a>Admin Orders</a>
                                             </Link> ) }
+
+                                            <button className="logout-btn" onClick={handleLogout}>
+                                                <TbLogout2 size={20} />
+                                            </button>
                                             <a href="#contact">Contact Us</a>
                                     <Link to="/order/my-order">
                                             <button className="book-table">My Bookings</button>

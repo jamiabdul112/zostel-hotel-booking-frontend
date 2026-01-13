@@ -138,6 +138,44 @@
     cursor: pointer;
 }
 
+
+.logout-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 8px;
+  color: #444;
+  transition: color 0.2s ease;
+}
+
+.logout-btn:hover {
+  color: #f44336; /* red on hover */
+}
+
+
+
+/* Tablet breakpoint (≤768px) */
+@media (max-width: 768px) {
+  .logout-btn {
+    font-size: 13px;
+    margin-left: 6px;
+    padding: 6px 10px; /* add padding for easier tap */
+  }
+}
+
+/* Mobile / Android breakpoint (≤480px) */
+@media (max-width: 480px) {
+  .logout-btn {
+    display: block;          /* stack if inside a row */
+    width: 100%;             /* full width for touch ergonomics */
+    text-align: center;
+    font-size: 12px;
+    margin: 8px 0;           /* spacing above/below */
+    padding: 10px;           /* larger tap target */
+  }
+}
+
+
 /* Tablet breakpoint (≤768px) */
 @media (max-width: 768px) {
     .header-page {
